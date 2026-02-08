@@ -33,7 +33,6 @@ The project is designed to be beginner-friendly, fully local (no paid APIs), and
 
 ---
 
-## 🗄️ Database Information
 
 ## 📊 Dataset Usage and Model Training Explanation
 
