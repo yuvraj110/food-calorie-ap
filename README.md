@@ -33,10 +33,50 @@ The project is designed to be beginner-friendly, fully local (no paid APIs), and
 
 ---
 
-## 🗄️ Database Information
 
-### Database Used
-- **No database is used in the current version of the project**
+## 📊 Dataset Usage and Model Training Explanation
+
+### Why a Pre-trained Model Is Used Instead of Training on a Dataset from Scratch
+
+This project does not train an AI model from scratch locally. Instead, it uses a **pre-trained food image classification model** that has already been trained on a large, real-world dataset.
+
+The model used in this application is trained on the **Food-101 dataset**, which contains over **101,000 real food images across 101 categories**. This dataset is widely used in academic research and industry for food recognition tasks.
+
+### Reason for This Approach
+
+Training a deep learning model from scratch requires:
+- High-performance GPU hardware
+- Large storage and memory resources
+- Significant training time
+- Advanced machine learning expertise
+
+Since the primary goal of this project is to build an **end-to-end AI-powered web application**, rather than to conduct deep learning research, using a pre-trained model is the most practical and industry-standard approach.
+
+### Benefits of Using a Pre-trained Model
+
+- Enables fast and reliable inference on standard laptops
+- Eliminates the need for heavy computational resources
+- Ensures reproducibility and stability
+- Allows the project to focus on application design and user experience
+
+### Calorie Estimation Consideration
+
+There is currently no reliable public dataset that directly maps food images to accurate calorie values. Calorie content depends on portion size, ingredients, and cooking methods, which cannot be determined precisely from an image alone.
+
+Therefore, this project estimates calories by:
+- Identifying the food category using the AI model
+- Mapping it to standard nutritional reference values
+- Displaying an approximate calorie range for a typical serving
+
+This approach ensures transparency, realism, and usability while avoiding misleading precision.
+
+### Dataset and Model Reference
+
+- **Food-101 Dataset**  
+  https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
+
+- **Pre-trained Model Source**  
+  Hugging Face Model Hub: `nateraw/food`
 
 ### Explanation
 - The application performs **real-time image analysis only**
